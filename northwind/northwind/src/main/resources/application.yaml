@@ -1,0 +1,47 @@
+project:
+  name: '@project.artifactId@'
+  version: '@project.version@'
+  description: '@project.description@'
+info:
+  build:
+    artifact: "@project.artifactId@"
+    name: "@project.name@"
+    description: '@project.description@'
+    version: '@project.version@'
+
+application:
+  title: ${project.name}
+  version: ${project.version}
+
+spring:
+  output:
+    ansi:
+      enabled: ${SPRING_OUTPUT_ANSI_ENABLE}
+  banner:
+    charset: ${SPRING_BANNER_CHARSET}
+    location: ${SPRING_BANNER_LOCATION}
+
+    #Database
+    datasource:
+      driver-class-name: org.postgresql.Driver
+      url: jdbc:postgresql://127.0.0.1:5432/northwind_db
+      username: postgres
+      password: 1508
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true #Opção para apresentar a execução de SQL no projeto.
+    open-in-view: false
+    #database-platform: org.hibernate.dialect.H2Dialect
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database: postgresql
+    generate-ddl: true #Cria DDDL (Crias a instruções de criação/alteração de tabela)
+
+#Logging
+logging:
+  level:
+    com.example.ecommerce.northwind: info
+    org.springframework.web: info
+    org:
+      hibernate.type: trace #Qualquer parâmetro que houver na instrução SQL será exibido no console.
