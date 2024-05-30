@@ -1,18 +1,18 @@
 ## Roteiro
 Transcrever o sql para um ambiente gerenciado por um ORM.
 
-//Jpa (especificação) > Implementações: hibernate, eclipseLink
-//hibernate (spring data)
+# Jpa (especificação) > Implementações: hibernate, eclipseLink
+% hibernate (spring data)
 
 01. Criar o projeto springboot
 02. Configurar a estrutura do projeto (yaml, pacotes, pom.xml e as variáveis de ambiente)
-    02.1. Iremos inserir o drive do Postgres
+    02.1. Inserir o drive do Postgres
 03. Criar os pacotes
 04. Criar as classes (vazias), num primeiro momento
 05. Fazer as anotações (model) conforme o modelo do SQL
 06. Fazer a estrutura resource > service > repository
     06.1 Fazer as anotações com OpenAPI para criar uma camada de teste(swagger).
-07. Podemos fazer um CRUD simples para persistência de dados.
+07. CRUD simples para persistência de dados.
 
 ## SQL gerado para mapeamento
 ![Projeto NorthWind E-Commerce](./src/main/resources/doc/northwind-v1-2024-04-04_18-54.svg "Title")
@@ -54,7 +54,7 @@ SPRING_BANNER_CHARSET=UTF-8;SPRING_BANNER_LOCATION=classpath:/banner.txt;SPRING_
 ```
 
 ## Descrição das Tecnologias Utilizadas:
-Este projeto utiliza as seguintes tecnologias principais:
+Este projeto utiliza as seguintes tecnologias
 
 Spring Boot: Framework de desenvolvimento de aplicações em Java.
 Hibernate: Framework ORM (Object-Relational Mapping) para mapeamento objeto-relacional em aplicações Java.
